@@ -22,7 +22,7 @@ sw_build=$(sw_vers -buildVersion)
 # found, the iCloud, Data & Privacy, Diagnostic, Touch ID, Screentime
 # Activation Lock and Siri pop-up settings are set to be disabled.
 
-if [[ ( ${osvers_major} -eq 10 && ${osvers_minor} -ge 7 ) ]]; then
+if [[ "$osvers_major" -eq 11 ]] || [[ ( ${osvers_major} -eq 10 && ${osvers_minor} -ge 7 ) ]]; then
 
  for USER_TEMPLATE in "$3/System/Library/User Template"/*
   do
